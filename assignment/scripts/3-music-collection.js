@@ -38,6 +38,10 @@ console.log("Added album:", album5); //added 5th album
 
 const album6 = addToCollection("Dangerous", "Morgan Wallen", 2021);
 console.log("Added album:", album6); //added a 6th album
+
+//adding a 7th album to test findByArtist function with multiple results of one artist
+const album7 = addToCollection("The Sound of Madness", "Shinedown", 2008);
+
 console.log(); //adding spacing for organization
 console.log("------------------------");
 console.log();
