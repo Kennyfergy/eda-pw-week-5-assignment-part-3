@@ -42,3 +42,18 @@ console.log(); //adding spacing for organization
 console.log("------------------------");
 console.log();
 console.log("The current collection is:", collection); //logging current collection
+
+// Add a function named 'showCollection'
+
+function showCollection(albumArray) {
+  console.log("The number of items in the collection", albumArray.length);
+
+  for (const album of albumArray) {
+    console.log(
+      `${album.title} by ${album.artist}, published in ${album.yearPublished}`
+    );
+  } //logging albumArray
+} // end showCollection function
+
+//testing showColelction
+showCollection(collection);
