@@ -55,5 +55,43 @@ function showCollection(albumArray) {
   } //logging albumArray
 } // end showCollection function
 
-//testing showColelction
+//testing showCollection
 showCollection(collection);
+
+console.log(); //adding spacing for organization
+console.log("------------------------");
+console.log();
+
+// add a function: findByArtist to sort through collection and add all artists
+function findByArtist(artist) {
+  const results = [];
+
+  for (const album of collection) {
+    if (album.artist === artist) {
+      results.push(album);
+    } //end if
+  } //end for
+  return results;
+} // end findByArtist function
+
+// Test the findByArtist function
+const artistToFind = "Shinedown";
+const artistResults = findByArtist(artistToFind);
+
+//created an if statement to output albums by an artist if they exist, else log that no albums exist for this artist
+if (artistResults.length > 0) {
+  console.log(`Albums by ${artistToFind}:`);
+  showCollection(artistResults);
+} else {
+  console.log(`No albums found for ${artistToFind}.`);
+}
+//testing an artist that is not in collection
+const artistNotInCollection = "Taylor Swift";
+const notFoundResults = findByArtist(artistNotInCollection);
+
+if (notFoundResults.length > 0) {
+  console.log(`Albums by ${artistNotInCollection}:`);
+  showCollection(notFoundResults);
+} else {
+  console.log(`No albums found for ${artistNotInCollection}.`);
+}
