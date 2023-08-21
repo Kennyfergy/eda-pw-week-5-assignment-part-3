@@ -88,7 +88,7 @@ if (artistResults.length > 0) {
   showCollection(artistResults);
 } else {
   console.log(`No albums found for ${artistToFind}.`);
-}
+} //end artistResults
 //testing an artist that is not in collection
 const artistNotInCollection = "Taylor Swift";
 const notFoundResults = findByArtist(artistNotInCollection);
@@ -98,4 +98,6 @@ if (notFoundResults.length > 0) {
   showCollection(notFoundResults);
 } else {
   console.log(`No albums found for ${artistNotInCollection}.`);
-}
+} // end results not found test
+
+//Stretch goals
